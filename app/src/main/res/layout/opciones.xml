@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Opciones"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="15dp">
+
+        <TextView
+            android:id="@+id/plataformas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Plataformas:"
+            android:textSize="25dp"
+            android:layout_marginTop="10dp"/>
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/chipGroup"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="20dp"
+            app:singleSelection="true"
+            >
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipPs4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PS4"
+                style="@style/Widget.MaterialComponents.Chip.Filter"/>
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipPc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PC"
+                style="@style/Widget.MaterialComponents.Chip.Filter"/>
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipXbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="XBOX"
+                style="@style/Widget.MaterialComponents.Chip.Filter"/>
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipWii"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="WII"
+                style="@style/Widget.MaterialComponents.Chip.Filter"/>
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipWiiu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="WIIU"
+                style="@style/Widget.MaterialComponents.Chip.Filter"/>
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip3ds"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3DS"
+                style="@style/Widget.MaterialComponents.Chip.Filter"/>
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipXbox360"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="X360"
+                style="@style/Widget.MaterialComponents.Chip.Filter"/>
+
+        </com.google.android.material.chip.ChipGroup>
+
+        <TextView
+            android:id="@+id/generos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Géneros:"
+            android:textSize="25dp"
+            android:layout_marginTop="15dp"
+            />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler"
+            android:layout_width="match_parent"
+            android:layout_height="430dp"
+            />
+
+
+    </LinearLayout>
+
+    <com.google.android.material.bottomappbar.BottomAppBar
+        android:id="@+id/bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:backgroundTint="@color/md_theme_dark_errorContainer"
+        app:fabAnchorMode="cradle"
+        style="@style/Widget.MaterialComponents.BottomAppBar"
+        />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        app:layout_anchor="@id/bar"
+        android:src="@android:drawable/ic_input_add"
+        />
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
